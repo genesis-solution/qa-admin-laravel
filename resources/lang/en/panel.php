@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'material dashboard',
+    'site_title' => 'CAMPAIGN',
 ];

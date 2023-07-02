@@ -2,7 +2,7 @@
 <html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
-    <title>ONE PAGE❘夢境如詩一頁 舒眠一夜-測驗問券Q1</title>
+    <title>{{ $title ?? 'ONE PAGE❘夢境如詩一頁 舒眠一夜-測驗問券Q1' }}</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     @yield('styles')
     <style>

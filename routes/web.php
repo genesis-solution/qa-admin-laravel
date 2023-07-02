@@ -5,6 +5,7 @@ Route::redirect('/', '/home');
 Route::get('/home', 'HomeController@index');
 Route::post('/question/{q_index}/{a_index}', 'HomeController@processQuestion')->name('question');
 Route::redirect('/question/{q_index}/{a_index}', '/home');
+
 Auth::routes(['register' => false]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {

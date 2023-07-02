@@ -1,6 +1,7 @@
-@extends('layouts.topic')
+@extends('layouts.topic', ['title' => 'ONE PAGE❘夢境如詩一頁 舒眠一夜-測驗問券Q'.$_index])
+
 @section('content')
-    @if(isset($data) && isset($_index))
+    @if(isset($data) && isset($_index) && isset($userid))
         <img src="{{asset('assets/img/'.$data[0]->image_path)}}" width="150px" >
         <h1>{{ $data[0]->desc }}</h1>
         <div class="inputBox">
@@ -16,16 +17,16 @@
                    onclick="event.preventDefault();
                         document.getElementById('qa-4').submit();">
         </div>
-        <form id="qa-1" action="{{ url('question/'.$_index.'/1') }}" method="POST" style="display: none;">
+        <form id="qa-1" action="{{ url('question/'.$_index.'/1?userid='.$userid) }}" method="POST" style="display: none;">
             @csrf
         </form>
-        <form id="qa-2" action="{{ url('question/'.$_index.'/2') }}" method="POST" style="display: none;">
+        <form id="qa-2" action="{{ url('question/'.$_index.'/2?userid='.$userid) }}" method="POST" style="display: none;">
             @csrf
         </form>
-        <form id="qa-3" action="{{ url('question/'.$_index.'/3') }}" method="POST" style="display: none;">
+        <form id="qa-3" action="{{ url('question/'.$_index.'/3?userid='.$userid) }}" method="POST" style="display: none;">
             @csrf
         </form>
-        <form id="qa-4" action="{{ url('question/'.$_index.'/4') }}" method="POST" style="display: none;">
+        <form id="qa-4" action="{{ url('question/'.$_index.'/4?userid='.$userid) }}" method="POST" style="display: none;">
             @csrf
         </form>
     @else

@@ -68,6 +68,10 @@ section
     gap: 30px;
     box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
+
+.login .qa-title-img {
+    width: 150px;
+}
 .login h1 
 {
     position: relative;
@@ -140,6 +144,92 @@ section
 {
     text-decoration: underline;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .login {
+        width: 80%;
+    }
+    .login h1 {
+        font-size: 3.5em;
+    }
+    .login .inputBox input {
+        font-size: 3.25em !important;
+    }
+    .login .qa-title-img {
+        width: 280px;
+    }
+
+    .dBDOqu {
+        font-size: 48px !important;
+    }
+    .cDHYvE {
+        font-size: 28px !important;
+    }
+    .juagnm input, .juagnm input:focus {
+        font-size: 28px !important;
+    }
+    .dqiKFy {
+        font-size: 28px !important;
+    }
+    .hPVtvf {
+        width: 52px !important;
+        height: 52px !important;
+    }
+    .hPVtvf img, .hPVtvf svg {
+        width: 52px !important;
+        height: 52px !important;
+    }
+    .jldcgw {
+        width: 52px !important;
+        height: 52px !important;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 992px) {
+    .login {
+        width: 80%;
+    }
+    .login h1 {
+        font-size: 3.25em;
+    }
+    .login .inputBox input {
+        font-size: 3em !important;
+    }
+    .login .qa-title-img {
+        width: 250px;
+    }
+
+    .dBDOqu {
+        font-size: 45px !important;
+    }
+    .cDHYvE {
+        font-size: 25px !important;
+    }
+    .juagnm input, .juagnm input:focus {
+        font-size: 25px !important;
+    }
+    .dqiKFy {
+        font-size: 25px !important;
+    }
+    .hPVtvf {
+        width: 48px !important;
+        height: 48px !important;
+    }
+    .hPVtvf img, .hPVtvf svg {
+        width: 48px !important;
+        height: 48px !important;
+    }
+    .jldcgw {
+        width: 48px !important;
+        height: 48px !important;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
 
 .crHwkP {
     z-index: 2000000000;
@@ -416,7 +506,7 @@ section
 .juagnm input, .juagnm input:focus {
     background: none !important;
     border: none !important;
-    font-size: inherit !important;
+    /*font-size: inherit !important;*/
     line-height: inherit !important;
     padding: 0px !important;
     box-shadow: none !important;
@@ -515,19 +605,6 @@ section
     white-space: nowrap;
     text-overflow: ellipsis;
     pointer-events: none;
-}
-
-.juagnm input, .juagnm input:focus {
-    background: none !important;
-    border: none !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
-    padding: 0px !important;
-    box-shadow: none !important;
-    color: inherit !important;
-    height: auto !important;
-    min-height: unset !important;
-    margin: 0px !important;
 }
 
 .gBjtAo {
@@ -843,19 +920,6 @@ section
     text-overflow: ellipsis;
     pointer-events: none;
 }
-
-.juagnm input, .juagnm input:focus {
-    background: none !important;
-    border: none !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
-    padding: 0px !important;
-    box-shadow: none !important;
-    color: inherit !important;
-    height: auto !important;
-    min-height: unset !important;
-    margin: 0px !important;
-}
 .gBjtAo {
     font-style: inherit;
     font-variant: inherit;
@@ -947,19 +1011,6 @@ section
     white-space: nowrap;
     text-overflow: ellipsis;
     pointer-events: none;
-}
-
-.juagnm input, .juagnm input:focus {
-    background: none !important;
-    border: none !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
-    padding: 0px !important;
-    box-shadow: none !important;
-    color: inherit !important;
-    height: auto !important;
-    min-height: unset !important;
-    margin: 0px !important;
 }
 
 .gBjtAo {

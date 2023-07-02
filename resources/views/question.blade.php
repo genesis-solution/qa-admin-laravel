@@ -2,7 +2,7 @@
 
 @section('content')
     @if(isset($data) && isset($_index) && isset($userid))
-        <img src="{{asset('assets/img/'.$data[0]->image_path)}}" width="150px" >
+        <img src="{{asset('assets/img/'.$data[0]->image_path)}}" class="qa-title-img" >
         <h1>{{ $data[0]->desc }}</h1>
         <div class="inputBox">
             <input type="submit" value="{{ $data[0]->q1 }}" id="btn" onclick="event.preventDefault();

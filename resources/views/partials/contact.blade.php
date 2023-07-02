@@ -1,9 +1,9 @@
-<div tabindex="-1" role="dialog" aria-modal="true" style="outline: 0px;">
+<div class="modal animated fadeIn"  id="yourModal" tabindex="-1" role="dialog" style="outline: 0px;">
     <div class="Backdrop__BackdropContainer-sc-19zz513-0 crHwkP" style="background: rgba(0, 0, 0, 0.6); z-index: 2000000000; opacity: 1;">
     </div>
     <div class="Pane__PaneContent-sc-5cfwpd-0 kZxbvk" style="z-index: 2000000000; width: 580px; transform: translateX(0%) translateZ(0px);">
         <div class="Pane__PaneClose-sc-5cfwpd-1 eOihTZ">
-            <button aria-label="Close" class="PopupCloseControl__PopupCloseControlContainer-sc-q4axm7-0 jldcgw" style="background-color: rgba(17, 17, 17, 0.5);">
+            <button class="PopupCloseControl__PopupCloseControlContainer-sc-q4axm7-0 close jldcgw" style="background-color: rgba(17, 17, 17, 0.5);" data-dismiss="modal" aria-label="Close" id="close_modal">
                 <div class="Icon__IconContainer-sc-6ec6m4-0 geUwjQ PopupCloseControl__CloseIcon-sc-q4axm7-1 iDvZEU" style="width: 16px; height: 16px; fill: rgb(255, 255, 255);">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.426 2.024l.094.083L8 6.586l4.48-4.479a1 1 0 011.497 1.32l-.083.095L9.414 8l4.48 4.478a1 1 0 01-1.32 1.498l-.094-.083L8 9.413l-4.48 4.48a1 1 0 01-1.497-1.32l.083-.095L6.585 8 2.106 3.522a1 1 0 011.32-1.498z"></path></svg>

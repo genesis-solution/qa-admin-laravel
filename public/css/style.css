@@ -624,7 +624,7 @@ section
     border-width: 2px;
     margin: 0;
 }
-.jUXzLe {
+.jUXzLe_1 {
     padding: 8px;
     display: inline-flex;
     -webkit-box-align: center;
@@ -908,7 +908,8 @@ section
     border-width: 2px;
 }
 .jUXzLe {
-    padding: 11px 30px;
+    /*padding: 11px 30px;*/
+    padding: 8px;
     background-color: rgba(0, 0, 0, 0);
     display: inline-flex;
     -webkit-box-align: center;

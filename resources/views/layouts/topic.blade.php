@@ -5,6 +5,11 @@
     <title>ONE PAGE❘夢境如詩一頁 舒眠一夜-測驗問券Q1</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     @yield('styles')
+    <style>
+        #yourModal {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <!--
@@ -26,24 +31,21 @@ Vector Link : https://www.freepik.com/free-vector/night-landscape-with-car-road-
         </div>
     </div>
     <div class="login center" data-depth-x="-0.25" >
-        <img src="{{asset('assets/img/q1.fw.png')}}" width="150px" >
-        <h1>您平常喜歡睡怎樣的床?</h1>
 
         @yield('content')
 
         <div class="group">
-
-
         </div>
 
     </div>
 
 </section>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>--}}
+{{--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>--}}
 @yield('scripts')
 @include('partials.contact')
 <div class="lbvXTF">
-    <button class="hjFUtE" title="此表單填寫代表同意個資隱私條件">
-
+    <button id="toggle_btn" class="hjFUtE" title="此表單填寫代表同意個資隱私條件">
         <span class="ButtonBase__Overlay-sc-p43e7i-4 jUXzLe">
             <div class="Icon__IconContainer-sc-11wrh3u-0 hPVtvf ButtonBase__ButtonIcon-sc-p43e7i-0 gMSomS">
                 <div>
@@ -67,6 +69,20 @@ Vector Link : https://www.freepik.com/free-vector/night-landscape-with-car-road-
         </span>
     </button>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script>
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+</script>
+<script>
+    document.getElementById("toggle_btn").addEventListener("click", function () {
+        document.getElementById("yourModal").style.transition = "2s";
+        document.getElementById("yourModal").style.display = "block";
 
+    });
+    document.getElementById("close_modal").addEventListener("click", function () {
+        document.getElementById("yourModal").style.display = "none";
+    });
+</script>
 </body>
 </html>

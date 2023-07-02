@@ -5,18 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\QuestionContent;
 use App\QuestionResult;
+use App\Contact;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
     public $result_images = [
-        'AAA',
-        'AAA',
-        'BBB',
-        'CCC',
-        'DDD',
-        'EEE'
+        'aaa',
+        'aaa',
+        'bbb',
+        'ccc',
+        'ddd',
+        'eee'
     ];
     /**
      * Create a new controller instance.
@@ -277,5 +278,37 @@ class HomeController extends Controller
         else {
             return -1;
         }
+    }
+
+    public function myContact(Request $request)
+    {
+        $data = $request->all();
+
+        if (Contact::create($data)) {
+
+            $to = "alex.ivanovic1001@gmail.com";
+            $subject = "夢境如詩一頁 舒眠一夜-測驗問券";
+
+            $message = "<h6>Name: ".$data["contact_name"]."</h6>";
+            $message .= "<h6>Phone number: ".$data["contact_phone"]."</h6>";
+            $message .= "<p>Country: ".$data["contact_country"]."</p>";
+            $message .= "<p>Area: ".$data["contact_area"]."</p>";
+
+            $header = "From:".$data["contact_email"]." \r\n";
+            $header .= "Cc:".$to." \r\n";
+            $header .= "MIME-Version: 1.0\r\n";
+            $header .= "Content-type: text/html\r\n";
+
+            $retval = mail ($to,$subject,$message,$header);
+
+            if( $retval == true ) {
+                echo "Message sent successfully...";
+            }else {
+                echo "Message could not be sent...";
+            }
+            die();
+        }
+
+        return redirect()->back();
     }
 }

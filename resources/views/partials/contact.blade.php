@@ -32,7 +32,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <form class="FormLayout__Container-sc-2kg2eg-0 iNyYeg">
+                            <form id="my_contact" action="{{ url('my_contact') }}" method="POST" class="FormLayout__Container-sc-2kg2eg-0 iNyYeg">
+                                @csrf
                                 <div class="FieldsGrid__Grid-sc-1luipcv-0 hCmtez">
                                     <div class="FieldsGrid__Row-sc-1luipcv-1 gRPRAW">
                                         <div class="FormFieldLayout__Container-sc-5t8s6i-3 fhufZN">
@@ -42,7 +43,7 @@
                                                         <div class="TextControlBase__TextControlBasePlaceholder-sc-1s66zih-8 CWjVC" data-projection-id="4" style="font-style: normal; font-weight: 400; color: rgba(0, 0, 0, 0.45);">
                                                             <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font>
                                                         </div>
-                                                        <input id="629f0ff1cb350" aria-required="true" type="shortText" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="聯絡姓名">
+                                                        <input id="contact_name" name="contact_name" required aria-required="true" type="text" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="聯絡姓名">
                                                     </div>
                                                 </div>
                                                 <div class="TextControlBase__TextControlBaseUnderline-sc-1s66zih-11 cCwZmz" data-projection-id="5" style="inset: -1px; border-width: 1px; border-color: rgba(190, 190, 190, 0.4);">
@@ -61,7 +62,7 @@
                                                                 <font style="vertical-align: inherit;"></font>
                                                             </font>
                                                         </div>
-                                                        <input id="629f0ff1cb3e9" aria-required="false" type="email" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="exmaple@domain.com">
+                                                        <input id="contact_email" name="contact_email" required aria-required="false" type="email" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="exmaple@domain.com">
                                                     </div>
                                                 </div>
                                                 <div class="TextControlBase__TextControlBaseUnderline-sc-1s66zih-11 cCwZmz" data-projection-id="10" style="inset: -1px; border-width: 1px; border-color: rgba(190, 190, 190, 0.4);">
@@ -79,7 +80,7 @@
                                                             <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font>
                                                             </font>
                                                         </div>
-                                                        <input id="629f0ff1cb44b" aria-required="true" type="phone" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="連絡行動電話">
+                                                        <input id="contact_phone" name="contact_phone" required aria-required="true" type="phone" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="連絡行動電話">
                                                     </div>
                                                 </div>
                                                 <div class="TextControlBase__TextControlBaseUnderline-sc-1s66zih-11 cCwZmz" data-projection-id="15" style="inset: -1px; border-width: 1px; border-color: rgba(190, 190, 190, 0.4);">
@@ -98,7 +99,7 @@
                                                                 <font style="vertical-align: inherit;"></font>
                                                             </font>
                                                         </div>
-                                                        <input id="629f0ff1cb491" aria-required="true" type="shortText" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="申請縣市">
+                                                        <input id="contact_country" name="contact_country" required aria-required="true" type="text" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="申請縣市">
                                                     </div>
                                                 </div>
                                                 <div class="TextControlBase__TextControlBaseUnderline-sc-1s66zih-11 cCwZmz" data-projection-id="20" style="inset: -1px; border-width: 1px; border-color: rgba(190, 190, 190, 0.4);">
@@ -115,7 +116,7 @@
                                                                 <font style="vertical-align: inherit;"></font>
                                                             </font>
                                                         </div>
-                                                        <input id="629f0ff1cb4d5" aria-required="false" type="shortText" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="區域">
+                                                        <input id="contact_area" name="contact_area" required aria-required="false" type="text" autocomplete="off" class="TextControlBase__TextControlBaseInput-sc-1s66zih-4 gBjtAo" value="" placeholder="區域">
                                                     </div>
                                                 </div>
                                                 <div class="TextControlBase__TextControlBaseUnderline-sc-1s66zih-11 cCwZmz" data-projection-id="25" style="inset: -1px; border-width: 1px; border-color: rgba(190, 190, 190, 0.4);">
@@ -127,7 +128,8 @@
                                 </div>
                                 <div class="FormLayout__Footer-sc-2kg2eg-8 fzBvFL">
                                     <div class="FormLayout__ButtonsGroup-sc-2kg2eg-11 fAsWhd">
-                                        <button aria-label="Submit" type="button" tabindex="0" _fontsize="16" _fontweight="bold" _borderwidth="2" class="ButtonBase__ButtonContainer-sc-p43e7i-3 gINuAf" data-projection-id="26" style="border-radius: 4px; border-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: inherit; font-style: normal; background-color: rgb(0, 102, 153);">
+                                        <button type="submit"
+                                                aria-label="Submit" tabindex="0" _fontsize="16" _fontweight="bold" _borderwidth="2" class="ButtonBase__ButtonContainer-sc-p43e7i-3 gINuAf" data-projection-id="26" style="border-radius: 4px; border-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-family: inherit; font-style: normal; background-color: rgb(0, 102, 153);">
                                             <span class="ButtonBase__Overlay-sc-p43e7i-4 jUXzLe" data-projection-id="27" style="padding: 11px 30px; background-color: rgba(0, 0, 0, 0);">
                                                 <span class="ButtonBase__Ellipsis-sc-p43e7i-5 dqiKFy">
                                                     <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">確認送出</font>

@@ -138,6 +138,25 @@ class HomeController extends Controller
                         $D = $D + 1;
                         $E = $E + 1;
                         break;
+                    case 4:
+                        switch ($data[0]->q1)
+                        {
+                            case 1:
+                                $A = $A + 1;
+                                $B = $B + 1;
+                                break;
+                            case 2:
+                                $C = $C + 1;
+                                break;
+                            case 3:
+                                $D = $D + 1;
+                                break;
+                            case 4:
+                                $E = $E + 1;
+                                break;
+                            default:
+                                break;
+                        }
                     default:
                         break;
                 }
@@ -155,7 +174,7 @@ class HomeController extends Controller
                         $C = $C + 1;
                         break;
                     case 4:
-                        switch (isset($data[0]->q1))
+                        switch ($data[0]->q1)
                         {
                             case 1:
                                 $A = $A + 1;
@@ -241,7 +260,7 @@ class HomeController extends Controller
                             break;
                         case 2:
                         case 3:
-                            switch (isset($data[0]->q1))
+                            switch ($data[0]->q1)
                             {
                                 case 1:
                                     $A = $A + 1;

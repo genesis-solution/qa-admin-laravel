@@ -9,3 +9,5 @@
 - __php artisan key:generate__
 - __php artisan migrate__
 - __php artisan serve__
+
+Please contact <a href="mailto:alex.ivanovic1001@gmail.com">me</a> if you have any questions.

@@ -1,12 +1,12 @@
 <?php
 
-Route::redirect('/', '/home');
+Route::redirect('/', '/home', 301);
 //Route::redirect('/home', '/admin');
 Route::get('/home', 'HomeController@index');
 Route::post('/question/{q_index}/{a_index}', 'HomeController@processQuestion')->name('question');
 Route::post('/my_contact', 'HomeController@myContact');
-Route::redirect('/question/{q_index}/{a_index}', '/home');
-Route::redirect('/my_contact', '/home');
+Route::redirect('/question/{q_index}/{a_index}', '/home', 301);
+Route::redirect('/my_contact', '/home', 301);
 
 Auth::routes(['register' => false]);
 

@@ -1,4 +1,4 @@
-@extends('layouts.topic', ['title' => 'ONE PAGE 專屬於你的書是/舒適/睡感-'.$_index])
+@extends('layouts.topic_result', ['title' => 'ONE PAGE 專屬於你的書是/舒適/睡感-'.$_index])
 
 @section('content')
     @if(isset($image_path) && isset($_index))
